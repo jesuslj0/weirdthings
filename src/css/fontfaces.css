@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MajorMonoDisplay';
+    src: url('/static/fonts/majormonodisplay-regular-webfont.woff2') format('woff2'),
+        url('/static/fonts/majormonodisplay-regular-webfont.woff') format('woff'),
+        url('/static/fonts/MajorMonoDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

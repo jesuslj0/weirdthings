@@ -13,25 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #f8f8f8;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #f22626;
-}
-
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100vw;
   min-height: 100vh;
+  height: 100%;
+  overflow: auto;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 4em;
   line-height: 1.1;
 }
 
@@ -46,13 +39,6 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -65,4 +51,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: auto;
 }

@@ -5,11 +5,12 @@ export const Navbar = () => {
         <div id="navbar-container">
             <nav id="navbar">
                 <ul>
-                    <li><a href="">Random Drawings</a></li>
-                    <li><a href="">Portraits</a></li>
-                    <li><a href="">Buildings</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/random-drawings">Random Drawings</a></li>
+                    <li><a href="/portraits">Portraits</a></li>
+                    <li><a href="/buildings">Buildings</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </nav>
         </div>

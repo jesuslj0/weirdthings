@@ -1,0 +1,23 @@
+import {BrowserRouter,Routes, Route} from 'react-router-dom';
+import { ReactNode } from 'react';
+import Home from './pages/Home';
+import About from './Components/About';
+import RandomDrawings from './pages/RandomDrawings';
+
+interface Props {
+    children: ReactNode;
+}
+
+export const Router = ({ children }: Props) => {
+
+    return (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/random-drawings" element={<RandomDrawings />} />
+          </Routes>
+          {children}
+        </BrowserRouter>
+    )
+}
