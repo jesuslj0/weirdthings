@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import Home from './pages/Home';
 import About from './Components/About';
 import RandomDrawings from './pages/RandomDrawings';
+import Portraits from './pages/Portraits';
 
 interface Props {
     children: ReactNode;
@@ -16,6 +17,7 @@ export const Router = ({ children }: Props) => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/random-drawings" element={<RandomDrawings />} />
+            <Route path="/portraits" element={<Portraits />} />
           </Routes>
           {children}
         </BrowserRouter>

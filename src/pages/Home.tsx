@@ -1,10 +1,21 @@
 import BackgroundVideo from "../Components/BackgroundVideo";
-import { Dashboard } from "../Dashboard";
+import { Navbar } from "../Components/Navbar";
+import "../css/Home.css";
+
+const HomeContent = () => {
+    return (
+        <>
+            <Navbar />
+            <h1	id="title">Weird Things</h1>
+            <div id="intro-text">Wellcome to my personal art gallery. A little bit of darkness and ink.</div>
+        </>
+    )
+}
 
 const Home = () => {
     return (
         <div id="home-page">
-            <BackgroundVideo children={<Dashboard />}/>
+            <BackgroundVideo children={<HomeContent />} source="/static/video/viaje.mp4"/>
         </div>
     )
 }

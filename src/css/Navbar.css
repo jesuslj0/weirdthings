@@ -1,10 +1,10 @@
-nav {
+#navbar {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-nav > ul {
+#navbar > ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -12,13 +12,13 @@ nav > ul {
     gap: 30px;
 }
 
-nav > ul > li > a {
+#navbar > ul > li > a {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     color: white;
 }
 
-nav > ul > li > a:hover {
-    text-shadow: 0px 0px 10px white;
+#navbar > ul > li > a:hover {
+    text-shadow: 0px 2px 8px white;
     transition: ease-in-out;
 }

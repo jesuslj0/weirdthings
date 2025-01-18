@@ -4,17 +4,32 @@ import '../css/fontfaces.css';
 
 interface Props {
   children: ReactNode;
+  source: string;
 }
 
-const BackgroundVideo: React.FC<Props> = ({children}: Props) => {
+const BackgroundVideo: React.FC<Props> = ({children, source}: Props) => {
   return (
     <div className="video-container">
-      <video className="video-background" autoPlay loop muted>
-        <source src="/static/video/redes.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="video-wrapper">
+        <video className="video-background" autoPlay loop muted>
+          <source src={source} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video className="video-background" autoPlay loop muted>
+          <source src={source} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video className="video-background" autoPlay loop muted>
+          <source src={source} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video className="video-background" autoPlay loop muted>
+          <source src={source} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className="content">
-       {children}
+        {children}
       </div>
     </div>
   );

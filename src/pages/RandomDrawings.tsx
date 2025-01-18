@@ -8,17 +8,19 @@ const RandomDrawingsContent = () => {
     const [images] = useState<string[]>([
         "/static/img/drawings/cara_triste.jpg",
         "/static/img/drawings/calle_ciudad.jpg",
-        "/static/img/drawings/free_guy.jpg",
+        "/static/img/drawings/mikasa.jpg",
         "/static/img/drawings/hombre_ojo.jpg",
+        "/static/img/drawings/free_guy.jpg",
         "/static/img/drawings/tio_raro.jpg",
         "/static/img/drawings/black_hole.jpg",
+        "/static/img/drawings/lock.jpg",
         "/static/img/drawings/tatto_coleccion.jpg",
     ]);
 
     return (
         <>
             <Navbar />
-            <h1 className="subtitle">Some random drawings</h1>
+            <h1 id="subtitle">Some random drawings</h1>
             <div id="images-container">
                 {images.map((src, index) => (
                     <img key={index} src={src} alt={`Image ${index}`} />
@@ -31,7 +33,7 @@ const RandomDrawingsContent = () => {
 const RandomDrawings = () => {
     return (
         <div id="random-drawings-page">
-            <BackgroundVideo children={<RandomDrawingsContent />}/>
+            <BackgroundVideo children={<RandomDrawingsContent />} source="/static/video/redes.mp4"/>
         </div>
     )
 }
