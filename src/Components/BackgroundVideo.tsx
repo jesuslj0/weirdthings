@@ -15,18 +15,6 @@ const BackgroundVideo: React.FC<Props> = ({children, source}: Props) => {
           <source src={source} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <video className="video-background" autoPlay loop muted>
-          <source src={source} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <video className="video-background" autoPlay loop muted>
-          <source src={source} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <video className="video-background" autoPlay loop muted>
-          <source src={source} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </div>
       <div className="content">
         {children}

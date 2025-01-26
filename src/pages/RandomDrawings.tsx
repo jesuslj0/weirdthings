@@ -12,7 +12,7 @@ const RandomDrawingsContent = () => {
         "/static/img/drawings/hombre_ojo.jpg",
         "/static/img/drawings/free_guy.jpg",
         "/static/img/drawings/tio_raro.jpg",
-        "/static/img/drawings/black_hole.jpg",
+        "/static/img/drawings/demonio.jpg",
         "/static/img/drawings/lock.jpg",
         "/static/img/drawings/tatto_coleccion.jpg",
     ]);
@@ -23,7 +23,7 @@ const RandomDrawingsContent = () => {
             <h1 id="subtitle">Some random drawings</h1>
             <div id="images-container">
                 {images.map((src, index) => (
-                    <img key={index} src={src} alt={`Image ${index}`} />
+                    <img key={index} src={src} alt={`Image ${index+1}`} />
                 ))}
             </div>
         </>

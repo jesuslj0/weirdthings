@@ -1,0 +1,16 @@
+#arquitecture-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.horizontal-img {
+    max-height: 90vh;
+    width: auto;
+}
+
+.vertical-img {
+    max-height: 90vh;
+    max-width: min-content;
+}

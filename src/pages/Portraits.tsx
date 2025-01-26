@@ -16,7 +16,7 @@ const PortraitsContent = () => {
             <h1 id="subtitle">Portraits</h1>
             <div id="portraits-container">
                 {images.map((src, index) => (
-                    <img key={index} src={src} alt={`Image ${index}`} />
+                    <img key={index} src={src} alt={`Image ${index+1}`} />
                 ))}
             </div>
         </>
