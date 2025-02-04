@@ -8,6 +8,7 @@ const PortraitsContent = () => {
     const [images] = useState([
         "/static/img/portraits/pilar.jpg",
         "/static/img/portraits/carmen.jpg",
+        "/static/img/portraits/simeone_torres.jpg",
     ])
 
     return (
@@ -25,7 +26,7 @@ const PortraitsContent = () => {
 
 const Portraits = () => {
     return (
-        <div id="random-drawings-page">
+        <div id="portraits-page">
             <BackgroundVideo children={<PortraitsContent />} source='/static/video/humo-claro.mp4'/>
         </div>
     )

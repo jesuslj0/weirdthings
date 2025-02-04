@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Navbar } from "../Components/Navbar";
 
-import '../css/Architecture.css';
+import '../css/Arquitecture.css';
 import BackgroundVideo from "../Components/BackgroundVideo";
 
 const ArquitectureContent = () => {
     const [horizontalImages] = useState([
         "/static/img/architecture/villa_saboye.jpg",
         "/static/img/architecture/geisel_library.jpg",
+        "/static/img/architecture/elqui_domos.jpg",
     ])
 
     const [verticalImages] = useState([
@@ -36,7 +37,7 @@ const ArquitectureContent = () => {
 
 const Arquitecture = () => {
     return (
-        <div id="architecture-page">
+        <div id="arquitecture-page">
             <BackgroundVideo children={<ArquitectureContent />} source='/static/video/bricks.mp4'/>
         </div>
     )

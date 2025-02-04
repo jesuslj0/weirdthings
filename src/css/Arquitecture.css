@@ -1,3 +1,11 @@
+#arquitecture-page {
+    background-color: #b8b2bb;
+}
+
+.video-container {
+    z-index: 2;
+}
+
 #arquitecture-container {
     display: flex;
     flex-direction: column;
