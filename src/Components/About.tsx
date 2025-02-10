@@ -1,4 +1,3 @@
-import BackgroundVideo from "../Components/BackgroundVideo";
 import { Navbar } from "./Navbar";
 
 const AboutContent = () => {
@@ -14,7 +13,7 @@ const AboutContent = () => {
 const About = () => {
     return (
         <div id="about-page">
-            <BackgroundVideo children={<AboutContent />}/>
+            <AboutContent />
         </div>
     )
 }
