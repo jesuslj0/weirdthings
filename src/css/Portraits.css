@@ -31,3 +31,16 @@
     width: 550px;
     height: auto;
 }
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #portraits-container > img {
+        width: 100%;
+        height: auto;
+    }
+
+    #portraits-container {
+        margin: 10px 10px;
+    }
+
+}

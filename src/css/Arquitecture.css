@@ -6,6 +6,10 @@
     z-index: 2;
 }
 
+#subtitle {
+    margin-bottom: 30px;
+}
+
 #arquitecture-container {
     display: flex;
     flex-direction: column;
@@ -21,4 +25,45 @@
 .vertical-img {
     max-height: 90vh;
     max-width: min-content;
+}
+
+#arquitecture-container {
+    display: flex;
+    flex-direction: column; /* Mantener el flujo vertical por defecto */
+    gap: 50px;
+    align-items: center;
+}
+
+.horizontal-img {
+    max-height: 90vh; /* Altura máxima para imágenes horizontales */
+    width: auto;
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+}
+
+.vertical-img {
+    max-height: 90vh; /* Altura máxima para imágenes verticales */
+    max-width: min-content; /* Ajusta el ancho para imágenes verticales */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #arquitecture-container {
+        margin: 10px 10px;
+        gap: 20px; 
+    }
+
+    .horizontal-img {
+        max-height: 70vh; 
+        width: 100%; 
+    }
+
+    .vertical-img {
+        max-height: 70vh;
+        max-width: 100%; 
+    }
+
+    #subtitle {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
 }

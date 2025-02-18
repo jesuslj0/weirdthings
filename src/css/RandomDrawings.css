@@ -21,3 +21,34 @@
     max-width: 360px;
     height: auto;
 }
+
+#images-container {
+    max-width: 800px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+    grid-template-rows: auto;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+#images-container > img {
+    max-width: 360px;
+    height: auto;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #images-container {
+        margin: 10px 10px;
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+    #images-container > img {
+        max-width: 100%;
+    }
+}

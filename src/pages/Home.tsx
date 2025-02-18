@@ -6,7 +6,9 @@ const HomeContent = () => {
     return (
         <>
             <Navbar />
-            <h1	id="title">Weird Things</h1>
+            <h1 id="title">
+                Weird Things
+            </h1>
             <div id="intro-text">Wellcome to my personal art gallery. A little bit of darkness and ink.</div>
         </>
     )

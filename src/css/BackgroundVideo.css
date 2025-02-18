@@ -20,3 +20,14 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .video-container {
+      min-height: 50vh; /* Reduce la altura mínima en pantallas pequeñas */
+  }
+
+  .video-background {
+      object-fit: contain; /* Asegura que el video se ajuste sin recortes */
+  }
+}

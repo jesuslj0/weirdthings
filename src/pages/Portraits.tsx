@@ -7,6 +7,7 @@ import BackgroundVideo from "../Components/BackgroundVideo";
 const PortraitsContent = () => {
     const [images] = useState([
         "/static/img/portraits/pilar.jpg",
+        "/static/img/portraits/andres.jpg",
         "/static/img/portraits/carmen.jpg",
         "/static/img/portraits/simeone_torres.jpg",
     ])
