@@ -1,6 +1,8 @@
 # Art Portfolio - WeirdThings
-<a href="https://weirdthings.art">weirdthings.art</a>
+<span>&#9758;</span> <a href="https://weirdthings.art" target="_blank">weirdthings.art</a>
 
-Here you can watch some of my drawings. Go to take a look!
-My favorite techniques are the pencil and black ink.
+<h3>My favorite techniques are the pencil and black ink.</h3>
+<h2>Here you can watch some of my drawings. Go to take a look!</h3>
+
+
 
