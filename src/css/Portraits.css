@@ -16,20 +16,19 @@
 }
 
 #portraits-container {
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     gap: 70px;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 
 #portraits-container > img {
-    width: 550px;
-    height: auto;
+    height: 90vh;
+    max-width: 100%;
 }
 
 /* Estilos para pantallas más pequeñas */
