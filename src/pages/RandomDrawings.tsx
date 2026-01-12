@@ -17,6 +17,11 @@ const RandomDrawingsContent = () => {
         "/static/img/drawings/cara_triste.jpg",
         "/static/img/drawings/demonio.jpg",
     ]);
+    const [modalImage, setModalImage] = useState<string | null>(null);
+
+    const openModalImage = (targetImage: HTMLImageElement) => {
+        setModalImage(targetImage.src)
+    }
 
     return (
         <>
@@ -24,9 +29,15 @@ const RandomDrawingsContent = () => {
             <h1 id="subtitle">Some random drawings</h1>
             <div id="images-container">
                 {images.map((src, index) => (
-                    <img key={index} src={src} alt={`Image ${index+1}`} />
+                    <img key={index} src={src} alt={`Image ${index+1}`} onClick={(e) => openModalImage(e.currentTarget as HTMLImageElement)} />
                 ))}
             </div>
+            {modalImage && (
+                <div id="modal">
+                    <img src={modalImage} alt="Modal" />
+                    <button id="close-modal" onClick={() => setModalImage(null)}>X</button>
+                </div>
+            )}
         </>
     )
 }

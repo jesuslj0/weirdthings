@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import "../css/BackgroundVideo.css";
 import '../css/fontfaces.css';
 
@@ -8,6 +8,7 @@ interface Props {
 }
 
 const BackgroundVideo: React.FC<Props> = ({children, source}: Props) => {
+
   return (
     <div className="video-container">
       <div className="video-wrapper">

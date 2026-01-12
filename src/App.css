@@ -7,3 +7,15 @@
   height: auto;
 }
 
+body {
+  cursor: url("/static/cursor/eye-cursor.svg") 16 16, auto;
+}
+
+a:hover {
+  cursor: url("/static/cursor/eye-closed.svg") 16 16, auto;
+}
+
+img:hover {
+  cursor: url("/static/cursor/eye-closed.svg") 16 16, auto;
+}
+

@@ -40,3 +40,38 @@
         max-width: 100%;
     }
 }
+
+/* Estilos de modal de imagen */
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+#close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 12px;
+  background-color: white;
+  font-weight: bold;
+  color: black;
+  cursor: url("/static/cursor/eye-closed.svg") 16 16, auto;
+  border-radius: 16px;
+}
+
+#close-modal:hover {
+    background-color: rgb(44, 44, 44);
+    transition: ease-in-out;
+    color: white;
+}

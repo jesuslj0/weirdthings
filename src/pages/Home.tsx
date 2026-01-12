@@ -2,6 +2,7 @@ import BackgroundVideo from "../Components/BackgroundVideo";
 import { Navbar } from "../Components/Navbar";
 import "../css/Home.css";
 
+
 const HomeContent = () => {
     return (
         <>
