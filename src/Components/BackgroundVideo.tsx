@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode } from "react";
 import "../css/BackgroundVideo.css";
 import '../css/fontfaces.css';
 
