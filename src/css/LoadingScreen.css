@@ -1,0 +1,42 @@
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    opacity: 1;
+    transition: opacity 0.7s ease;
+    pointer-events: all;
+}
+
+.loading-screen.loading-fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-title {
+    font-family: 'MajorMonoDisplay', Arial, sans-serif;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.loading-cursor {
+    animation: loading-blink 0.7s step-end infinite;
+}
+
+@keyframes loading-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .loading-title { font-size: 42px; }
+}
+
+@media (max-width: 480px) {
+    .loading-title { font-size: 28px; letter-spacing: 2px; }
+}

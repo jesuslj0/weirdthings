@@ -8,7 +8,7 @@
     max-width: 800px;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 35px;
     justify-content: center;
@@ -17,61 +17,141 @@
     margin-bottom: 50px;
 }
 
-#images-container > img {
+.drawing-thumb {
     max-width: 360px;
     height: auto;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-#images-container > img {
-    max-width: 360px;
-    height: auto;
+.drawing-thumb:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
-/* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
     #images-container {
         margin: 10px 10px;
-        grid-template-columns: 1fr; 
-        gap: 20px; 
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    #images-container > img {
+    .drawing-thumb {
         max-width: 100%;
     }
 }
 
-/* Estilos de modal de imagen */
+/* Modal */
 #modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: modal-bg-in 0.25s ease;
 }
 
-#modal img {
-  max-width: 90%;
-  max-height: 90%;
-  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+@keyframes modal-bg-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#modal-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modal-zoom-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modal-zoom-in {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+#modal-inner img {
+    max-width: 88vw;
+    max-height: 86vh;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+    display: block;
 }
 
 #close-modal {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 12px;
-  background-color: white;
-  font-weight: bold;
-  color: black;
-  cursor: url("/static/cursor/eye-closed.svg") 16 16, auto;
-  border-radius: 16px;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    cursor: url("/static/cursor/eye-closed.svg") 16 16, auto;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #close-modal:hover {
     background-color: rgb(44, 44, 44);
-    transition: ease-in-out;
     color: white;
+}
+
+#modal-prev,
+#modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 36px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: url("/static/cursor/eye-closed.svg") 16 16, auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    line-height: 1;
+    padding: 0;
+}
+
+#modal-prev { left: -60px; }
+#modal-next { right: -60px; }
+
+#modal-prev:hover,
+#modal-next:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+#modal-counter {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'AnonymousPro-Regular', Courier, monospace;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    #modal-prev { left: -48px; }
+    #modal-next { right: -48px; }
+
+    #modal-prev,
+    #modal-next {
+        width: 36px;
+        height: 36px;
+        font-size: 28px;
+    }
 }

@@ -1,15 +1,18 @@
 import BackgroundVideo from "../Components/BackgroundVideo"
 import ContactForm from "../Components/ContactForm"
 import { Navbar } from "../Components/Navbar"
+import '../css/Contact.css'
 
 const ContactContent = () => {
     return (
-            <>
-                <Navbar />
+        <>
+            <Navbar />
+            <div id="contact-hero">
                 <h1 id="subtitle">Contact with me</h1>
                 <ContactForm />
-            </>
-        )
+            </div>
+        </>
+    )
 }
 
 export const Contact = () => {

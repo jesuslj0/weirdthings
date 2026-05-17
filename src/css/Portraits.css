@@ -1,3 +1,7 @@
+#portraits-page .video-background {
+    object-position: top center;
+}
+
 #portraits-page {
     display: flex;
     flex-direction: column;
@@ -26,14 +30,49 @@
     margin-bottom: 50px;
 }
 
-#portraits-container > img {
-    height: 90vh;
-    max-width: 100%;
+.portrait-item {
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
 }
 
-/* Estilos para pantallas más pequeñas */
+.portrait-item img {
+    height: 90vh;
+    max-width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portrait-item:hover img {
+    transform: scale(1.03);
+}
+
+.portrait-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 45%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 32px;
+}
+
+.portrait-item:hover .portrait-overlay {
+    opacity: 1;
+}
+
+.portrait-name {
+    font-family: 'MajorMonoDisplay', Arial, sans-serif;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
 @media (max-width: 768px) {
-    #portraits-container > img {
+    .portrait-item img {
         width: 100%;
         height: auto;
     }
@@ -42,4 +81,7 @@
         margin: 10px 10px;
     }
 
+    .portrait-name {
+        font-size: 22px;
+    }
 }
